@@ -1,0 +1,4 @@
+Bootstrap theme from - http://ironsummitmedia.github.io/startbootstrap-freelancer/
+Graph Image Source - https://www.iconfinder.com/icons/532632/analysis_chart_charts_diagram_graph_graphs_monitor_icon#size=128
+
+World Population - https://www.census.gov/population/international/data/idb/region.php?N=%20Results%20&T=15&A=both&RT=0&Y=2010,2011,2012,2013,2014&R=-1&C=CA,IN,IT,SN,UK,US

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<script src="d3.js"></script>
+<script>
+
+var bardata= [ 20,30,40,50];
+
+var height = 400,
+	width = 600,
+	barWidth = 50,
+	barOffset=5;
+	
+
+	d3.select('body').append('svg')
+			.attr('width',width)
+			.style('background','#C9D7D6')
+			.attr('height',height)
+			.selectAll('rect').data(bardata)
+			.enter().append('rect')
+				.style('fill','#C61C6F')
+				.attr('width',barWidth)
+				.attr('height',function(d){return d;})
+				.attr('x',function(d,i){return i*(barWidth);}
+				.attr('y', function(d){return height-d;})
+
+</script>
+
+</head>
+</html>

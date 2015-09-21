@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html myapp>
+	<head>
+	 <script src="js/jquery.js"></script>
+	 <script src="js/angular.min.js"></script>
+	 <script src="js/char1.js"></script>
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js"></script>
+	 <script type="text/javascript" src="js/app.js"></script>  
+	 <script type="text/javascript" src="js/d3.js"></script>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>Still Crazy after all these years</title>
+
+		<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom CSS -->
+		<link href="css/freelancer.css" rel="stylesheet">
+
+		<!-- Custom Fonts -->
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<body id="page-top" class="index">
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">SCAATY</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li class="page-scroll">
+							<a href="app.html">USA</a>
+						</li>
+						<li class="page-scroll">
+							<a href="world.html">World</a>
+						</li>
+						
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		
+					
+
+
+		<section class="success" id="about">
+			<div class="container">
+				<div class="row">
+					<button id="1" type="button" class="btn btn-primary btn-lg" onClick="changeGender(this)">Male</button>
+					<button id="2"type="button" class="btn btn-primary btn-lg" onClick="changeGender(this)">Female</button>
+					<button id="0"type="button" class="btn btn-primary btn-lg btn-danger" onClick="changeGender(this)">Total</button>
+					<button id="absolute" type="button" class="btn btn-primary btn-lg btn-danger" onClick="absrelative_func(this)">Absolute</button>
+					<button id="pie_layout" type="button" class="btn btn-primary btn-lg " onClick="pie_func(this)">Pie Layout</button>
+					<button id="bar_layout" type="button" class="btn btn-primary btn-lg btn-danger disabled" onClick="bar_func(this)">Bar Layout</button>
+					<div class="dropdown">
+					<button class="btn btn-primary dropdown-toggle btn-lg" id="menu1" type="button" data-toggle="dropdown" >Select an Event
+						<span class="caret"></span></button>
+						<ul id ="dd_event" class="dropdown-menu" role="menu" aria-labelledby="menu1">
+					
+						</ul>	
+
+				</div>
+			</div>
+			<div class="container">
+			<div class="row">
+                
+                    <p><h1 id="eventName">NO Event Selected </h1></p>
+
+               
+                    <p id="eventDes">Choose an Event From the "DropDown" Above</p>
+                
+			</div>
+			</div>
+			<hr class="star-light">
+			
+			<div class="container">
+				<div class="row">
+					<div class="dropdown">
+						<button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Chart 1
+						<span class="caret"></span></button>
+						<ul id ="graph1_ul" class="dropdown-menu" role="menu" aria-labelledby="menu1">
+						  
+						</ul>
+					</div>
+					
+					
+				</div>
+			</div>
+			
+			
+			
+			<div class="container">
+				<div class="row">					
+						<div id="graph1"class="col-lg-4 col-lg-offset-2"><h1> <strong id="graph1-head">India</strong> </h1></div>			
+					
+				</div>
+				 
+			</div>
+			<div class="container">
+						
+				<div class="row">
+					<div class="dropdown">
+						<button class="btn btn-primary dropdown-toggle" id="menu2" type="button" data-toggle="dropdown" >Chart 2
+						<span class="caret"></span></button>
+						<ul id ="graph2_ul" class="dropdown-menu" role="menu" aria-labelledby="menu2">
+						     
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+			 <div class="container">
+				<div class="row">
+					<div id="graph2"class="col-lg-4 col-lg-offset-2"><h1> <strong id="graph2-head">United Kingdom</strong> </h1></div>
+					
+				</div>
+			</div>
+			<table>
+		
+			<div class="container">
+						
+				<div class="row">
+					<div class="dropdown">
+						<button class="btn btn-primary dropdown-toggle" id="menu3" type="button" data-toggle="dropdown" >Chart 3
+						<span class="caret"></span></button>
+						<ul id="graph3_ul" class="dropdown-menu" role="menu" aria-labelledby="menu3">
+						    
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+			
+			</table>
+			<div class="container">
+				<div class="row">
+					<div id="graph3"class="col-lg-4 col-lg-offset-2"><h1> <strong id="graph3-head">Germany</strong> </h1></div>
+					
+				</div>
+			</div>
+			
+			
+			
+				
+			
+			
+		</section>
+		
+			<script>
+				
+			//Add States to drop down list
+			
+			var activeButton=0;
+			var absRelative=false;
+			var eventYear=2014;
+			var pieData=false;
+			var barData=true;
+					
+									
+					function chart_svg(chartnum,state,SVG_ID)
+					{
+					console.log(state);
+					var intvalue;
+					var population1=[];
+					var domainVal=24089627;
+
+					var keys;
+					var i=5;
+					d3.csv('data/World.csv', function(data) {
+							
+							
+						for (key in data) 
+						{
+							if(data[key].name==state && data[key].age>12 && data[key].sex==activeButton && data[key].age<85)
+							{ 
+								console.log(data[key].name,state);
+								if(eventYear==2010)
+								{
+									intvalue=+data[key].y2010;
+									population1.push(intvalue);
+								}
+								if(eventYear==2011)
+								{
+									intvalue=+data[key].y2011;
+									population1.push(intvalue);
+								}
+								if(eventYear==2012)
+								{
+									intvalue=+data[key].y2012;
+									population1.push(intvalue);
+								}
+								if(eventYear==2013)
+								{
+									intvalue=+data[key].y2013;
+									population1.push(intvalue);
+								}
+								if(eventYear==2014)
+								{
+									intvalue=+data[key].y2014;
+									population1.push(intvalue);
+								}
+							}
+								   
+						}
+						
+							if(absRelative==true)
+							{
+								domainVal=d3.max(population1);
+							}
+
+										var margin = {top:30, right:0, bottom:2,left:62}
+
+										var height = 400-margin.top-margin.bottom,
+											width = 1200-margin.right-margin.left,
+											barWidth = 50,
+											barOffset=5;
+											
+										var yScale= d3.scale.linear()
+												.domain([0,domainVal])
+												.range([0,height]);
+												
+										var	xScale = d3.scale.ordinal()
+													.domain(d3.range(12,population1.length))
+													.rangeBands([0,width],0.1);
+													
+										var colors =d3.scale.linear()
+													.domain([0,domainVal])
+													.range(['#FFB832','#C61C6F']);
+
+
+										var myChart1= d3.select(chartnum).append('svg')
+														
+													.style('background','#18bc9c')
+													.attr("id",SVG_ID)
+													.attr('width',width+margin.left+margin.right)
+													.attr('height',height+margin.top+margin.bottom)
+													.append('g')
+													.attr('transform','translate('+margin.left+','+(margin.bottom)+')')			
+													.selectAll('rect').data(population1)
+													.enter().append('rect')
+														.style('fill',colors)
+														.attr('width',xScale.rangeBand())
+														.attr('height',yScale)
+														.attr('x',function(d,i) {return xScale(i);})
+														.attr('y',height);
+														
+										myChart1.transition()
+										.attr('height',function(d){return yScale(d);})
+										.attr('y', function(d){return height- yScale(d);})
+										.duration(500)
+										.ease('sin');
+
+										var vGuideScale = d3.scale.linear()
+														.domain([0,domainVal])
+														.range([height,0])
+
+										var vAxis=d3.svg.axis()
+													.scale(vGuideScale)
+													.orient('left')
+													.ticks(10);
+													
+										var vGuide = d3.select(chartnum).select('svg').append('g');
+													vAxis(vGuide)
+													vGuide.attr('transform','translate('+(margin.left)+','+(margin.top-34)+')');
+													vGuide.selectAll('path')
+													.style({ fill: 'none', stroke: "#000"})
+													vGuide.selectAll('line')
+													.style({stroke:"#000"})
+
+										var hAxis = d3.svg.axis()
+											.scale(xScale)
+											.orient('bottom')
+											.ticks(xScale);
+
+										var hGuide = d3.select(chartnum).select('svg').append('g')
+											hAxis(hGuide)
+											hGuide.attr('transform', 'translate('+(margin.left)+','+(height+margin.top-30)+')')
+											hGuide.selectAll('path')
+												.style({ fill: 'none', stroke: "#000"})
+											hGuide.selectAll('line')
+												.style({ stroke: "#000"});
+													
+
+
+											});			
+						
+					}
+							
+			</script>		
+			<script>
+				   
+				   function updateGraphs()
+					{
+						if(barData)
+						{
+						var	s1=document.getElementById("graph1-head").innerHTML;
+						var s2=document.getElementById("graph2-head").innerHTML;
+						var s3=document.getElementById("graph3-head").innerHTML;
+							
+						d3.select("#SVG_ID_1")
+						   .remove();
+						d3.select("#SVG_ID_2")
+						   .remove();
+						d3.select("#SVG_ID_3")
+						   .remove();
+						
+						chart_svg(graph1,s1,"SVG_ID_1");
+						chart_svg(graph2,s2,"SVG_ID_2");
+						chart_svg(graph3,s3,"SVG_ID_3");
+						}
+						if(pieData)
+						{
+						
+						d3.select("#SVG_ID_1")
+							.remove();
+						d3.select("#SVG_ID_2")
+							.remove();
+						d3.select("#SVG_ID_3")
+							.remove();
+						var	s1=document.getElementById("graph1-head").innerHTML;
+						var s2=document.getElementById("graph2-head").innerHTML;
+						var s3=document.getElementById("graph3-head").innerHTML;
+						
+						pie_svg(graph1,s1,"SVG_ID_1");
+						pie_svg(graph2,s2,"SVG_ID_2");
+						pie_svg(graph3,s3,"SVG_ID_3");
+						
+						}
+					}
+				
+			//add states
+			
+					
+					d3.csv('data/Countries.csv', function(data) {
+					   
+						for (key in data) 
+						{
+							
+							var graph1_ul = document.getElementById("graph1_ul");
+							var li_tag = document.createElement('li');
+							var a_tag = document.createElement('a');
+										
+							li_tag.setAttribute('id',data[key].statename);
+							li_tag.setAttribute('onClick',"findState1(this)");
+							a_tag.setAttribute('role',"menuitem");
+							a_tag.setAttribute('tabindex',"-1");
+							a_tag.setAttribute('href',"#");
+							a_tag.innerHTML=data[key].statename;
+							li_tag.appendChild(a_tag);
+							graph1_ul.appendChild(li_tag);
+								   
+						}
+					});
+					
+					d3.csv('data/Countries.csv', function(data) {
+					   
+						for (key in data) 
+						{
+							
+							var graph2_ul = document.getElementById("graph2_ul");
+							var li_tag = document.createElement('li');
+							var a_tag = document.createElement('a');
+										
+							li_tag.setAttribute('id',data[key].statename);
+							li_tag.setAttribute('onClick',"findState2(this)");
+							a_tag.setAttribute('role',"menuitem");
+							a_tag.setAttribute('tabindex',"-1");
+							a_tag.setAttribute('href',"#");
+							a_tag.innerHTML=data[key].statename;
+							li_tag.appendChild(a_tag);
+							graph2_ul.appendChild(li_tag);
+								   
+						}
+					});
+					
+					d3.csv('data/Countries.csv', function(data) {
+					   
+						for (key in data) 
+						{
+							
+							var graph3_ul = document.getElementById("graph3_ul");
+							var li_tag = document.createElement('li');
+							var a_tag = document.createElement('a');
+										
+							li_tag.setAttribute('id',data[key].statename);
+							li_tag.setAttribute('onClick',"findState3(this)");
+							a_tag.setAttribute('role',"menuitem");
+							a_tag.setAttribute('tabindex',"-1");
+							a_tag.setAttribute('href',"#");
+							a_tag.innerHTML=data[key].statename;
+							li_tag.appendChild(a_tag);
+							graph3_ul.appendChild(li_tag);
+								   
+						}
+					});
+				
+					d3.csv('data/WorldEvents.csv', function(data) {
+					  
+						for (key in data) 
+						{
+							
+							var dd_event = document.getElementById("dd_event");
+							var li_tag = document.createElement('li');
+							var a_tag = document.createElement('a');
+										
+							li_tag.setAttribute('id',data[key].event);
+							li_tag.setAttribute('onClick',"eventClick(this)");
+							a_tag.setAttribute('role',"menuitem");
+							a_tag.setAttribute('tabindex',"-1");
+							a_tag.setAttribute('href',"#");
+							a_tag.innerHTML=data[key].event;
+							li_tag.appendChild(a_tag);
+							dd_event.appendChild(li_tag);
+								   
+						}
+					});
+				
+				   
+				var graph1="#graph1";
+				var graph2="#graph2";
+				var graph3="#graph3";
+				chart_svg(graph1,"India","SVG_ID_1");
+				chart_svg(graph2,"Germany","SVG_ID_2");
+				chart_svg(graph3,"Russia","SVG_ID_3");
+				
+					function findState1(elmnt)
+					{
+						var dd_click=elmnt.id;
+						var y=document.getElementById("graph1-head");
+						y.innerHTML=dd_click;
+						d3.select("#SVG_ID_1")
+						   .remove();
+						if(barData)
+						{chart_svg(graph1,dd_click,"SVG_ID_1");}
+						if(pieData)
+						{pie_svg(graph1,dd_click,"SVG_ID_1");}
+						
+						
+						
+					}
+					function findState2(elmnt)
+					{
+						var dd_click=elmnt.id;
+						var y=document.getElementById("graph2-head");
+						y.innerHTML=dd_click;
+						d3.select("#SVG_ID_2")
+						   .remove();
+						if(barData)
+						{chart_svg(graph2,dd_click,"SVG_ID_2");}
+						if(pieData)
+						{pie_svg(graph2,dd_click,"SVG_ID_2");}
+						
+						
+						
+					}
+					function findState3(elmnt)
+					{
+						var dd_click=elmnt.id;
+						var y=document.getElementById("graph3-head");
+						y.innerHTML=dd_click;
+						d3.select("#SVG_ID_3")
+						   .remove();
+						if(barData)
+						{chart_svg(graph3,dd_click,"SVG_ID_3");}
+						if(pieData)
+						{pie_svg(graph3,dd_click,"SVG_ID_3");}
+						
+						
+						
+					}
+					function changeGender(elmnt)
+					{
+					  
+					  var dd_click=elmnt.id;
+						
+					  if(dd_click==0)
+					  {
+						document.getElementById(0).setAttribute('class',"btn btn-primary btn-lg btn-danger");
+						document.getElementById(1).setAttribute('class',"btn btn-primary btn-lg");
+						document.getElementById(2).setAttribute('class',"btn btn-primary btn-lg");
+					  }
+					  if(dd_click==1)
+					  {
+						document.getElementById(0).setAttribute('class',"btn btn-primary btn-lg");
+						document.getElementById(1).setAttribute('class',"btn btn-primary btn-lg btn-danger");
+						document.getElementById(2).setAttribute('class',"btn btn-primary btn-lg");
+					  }
+					  if(dd_click==2)
+					  {
+						document.getElementById(0).setAttribute('class',"btn btn-primary btn-lg");
+						document.getElementById(1).setAttribute('class',"btn btn-primary btn-lg");
+						document.getElementById(2).setAttribute('class',"btn btn-primary btn-lg btn-danger");
+					  }
+						activeButton=+dd_click;
+						
+						updateGraphs();
+					}
+					
+					function absrelative_func(elmnt)
+					{
+						
+						
+						
+						if(absRelative==true)
+						{
+							absRelative=false;
+							document.getElementById("absolute").setAttribute('class',"btn btn-primary btn-lg btn-danger");
+						}
+						else
+						{
+							absRelative=true;
+							document.getElementById("absolute").setAttribute('class',"btn btn-primary btn-lg");
+						}
+						
+						updateGraphs();
+					}
+					
+					function selectYear(elmnt)
+					{
+						
+					}
+					
+					function eventClick(elmnt)
+					{
+						d3.csv('data/WorldEvents.csv', function(data) {
+					   console.log(data);
+						for (key in data) 
+						{
+						 
+							if(data[key].event==elmnt.id)
+							{
+								eventYear=data[key].year;
+								document.getElementById("eventName").innerHTML=data[key].event;
+								document.getElementById("eventDes").innerHTML=data[key].description;
+														
+								
+							}
+						}
+							updateGraphs();
+						});
+					}
+					
+					
+			</script>
+	<script src="js/getpiedata.js"></script>
+				<script>
+				
+				
+				function pie_svg(chartnum,state,SVG_ID)
+				{
+					var totPopulation=0;
+				 var temp;
+				 var age_12_20=0,age_21_30=0,age_31_40=0,age_41_50=0,age_51_60=0,age_61_70=0;
+				 var piedata;
+				 var concious_age=0;
+					d3.csv('data/World.csv', function(data) {
+					 
+					 		for (key in data) 
+						{
+														
+							if(data[key].name==state && data[key].sex==activeButton)
+							{ 								
+								if(eventYear==2011)
+								{
+										if(data[key].age>12 && data[key].age<21)
+									{
+										
+										temp=+data[key].y2011;
+										age_12_20=age_12_20+temp;
+										
+									}
+									if(data[key].age>20 && data[key].age<31)
+									{
+										temp=+data[key].y2011;
+										age_21_30=age_21_30+temp;
+										
+									}
+									
+									if(data[key].age>30 && data[key].age<41)
+									{
+										temp=+data[key].y2011;
+										age_31_40=age_31_40+temp;
+										
+									}
+									if(data[key].age>40 && data[key].age<51)
+									{
+										temp=+data[key].y2011;
+										age_41_50=age_41_50+temp;
+										
+									}
+									if(data[key].age>50 && data[key].age<61)
+									{
+										temp=+data[key].y2011;
+										age_51_60=age_51_60+temp;
+										
+									}
+									if(data[key].age>60 && data[key].age<71)
+									{
+										temp=+data[key].y2011;
+										age_61_70=age_61_70+temp;
+										
+									}
+									if(data[key].age==999)
+									{
+										totPopulation=+data[key].y2011;
+									}
+									if(data[key].age>70 && data[key].age<86)
+									{
+										temp=+data[key].y2011;
+										concious_age=concious_age+temp;
+										
+									}
+									if(data[key].age>-1 && data[key].age<13)
+									{
+										temp=+data[key].y2011;
+										concious_age=concious_age+temp;
+										
+									}
+									
+								}
+								if(eventYear==2012)
+								{
+									
+									if(data[key].age>12 && data[key].age<21)
+									{
+										temp=+data[key].y2012;
+										age_12_20=age_12_20+temp;
+										
+									}
+									if(data[key].age>20 && data[key].age<31)
+									{
+										temp=+data[key].y2012;
+										age_21_30=age_21_30+temp;
+										
+									}
+									if(data[key].age>30 && data[key].age<41)
+									{
+										temp=+data[key].y2012;
+										age_31_40=age_31_40+temp;
+										
+									}
+									if(data[key].age>40 && data[key].age<51)
+									{
+										temp=+data[key].y2012;
+										age_41_50=age_41_50+temp;
+										
+									}
+									if(data[key].age>50 && data[key].age<61)
+									{
+										temp=+data[key].y2012;
+										age_51_60=age_51_60+temp;
+										
+									}
+									if(data[key].age>60 && data[key].age<71)
+									{
+										temp=+data[key].y2012;
+										age_61_70=age_61_70+temp;
+										
+									}
+									if(data[key].age==999)
+									{
+										totPopulation=+data[key].y2012;
+										
+									}
+									if(data[key].age>70 && data[key].age<86)
+									{
+										temp=+data[key].y2012;
+										concious_age=concious_age+temp;
+										
+									}
+									if(data[key].age>-1 && data[key].age<13)
+									{
+										temp=+data[key].y2012;
+										concious_age=concious_age+temp;
+										
+									}
+									
+								}
+								if(eventYear==2013)
+								{
+										if(data[key].age>12 && data[key].age<21)
+									{
+										temp=+data[key].y2013;
+										age_12_20=age_12_20+temp;
+										
+									}
+									if(data[key].age>20 && data[key].age<31)
+									{
+										temp=+data[key].y2013;
+										age_21_30=age_21_30+temp;
+										
+									}
+									if(data[key].age>30 && data[key].age<41)
+									
+									{
+										temp=+data[key].y2013;
+										age_31_40=age_31_40+temp;
+										
+									}
+									if(data[key].age>40 && data[key].age<51)
+									{
+										temp=+data[key].y2013;
+										age_41_50=age_41_50+temp;
+										
+									}
+									if(data[key].age>50 && data[key].age<61)
+									{
+										temp=+data[key].y2013;
+										age_51_60=age_51_60+temp;
+										
+									}
+									if(data[key].age>60 && data[key].age<71)
+									{
+										temp=+data[key].y2013;
+										age_61_70=age_61_70+temp;
+										
+									}
+									if(data[key].age==999)
+									{
+										totPopulation=+data[key].y2013;
+									}
+									if(data[key].age>70 && data[key].age<86)
+									{
+										temp=+data[key].y2013;
+										concious_age=concious_age+temp;
+										
+									}
+									if(data[key].age>-1 && data[key].age<13)
+									{
+										temp=+data[key].y2013;
+										concious_age=concious_age+temp;
+										
+									}
+									
+								}
+								if(eventYear==2014)
+								{
+										if(data[key].age>12 && data[key].age<21)
+									{
+										temp=+data[key].y2014;
+										age_12_20=age_12_20+temp;
+										
+									}
+									if(data[key].age>20 && data[key].age<31)
+									{
+										temp=+data[key].y2014;
+										age_21_30=age_21_30+temp;
+										
+									}
+									if(data[key].age>30 && data[key].age<41)
+								
+									{
+										temp=+data[key].y2014;
+										age_31_40=age_31_40+temp;
+										
+									}
+									if(data[key].age>40 && data[key].age<51)
+									{
+										temp=+data[key].y2014;
+										age_41_50=age_41_50+temp;
+										
+									}
+									if(data[key].age>50 && data[key].age<61)
+									{
+										temp=+data[key].y2014;
+										age_51_60=age_51_60+temp;
+										
+									}
+									if(data[key].age>60 && data[key].age<71)
+									{
+										temp=+data[key].y2014;
+										age_61_70=age_61_70+temp;
+										
+									}
+									if(data[key].age>70 && data[key].age<86)
+									{
+										temp=+data[key].y2014;
+										concious_age=concious_age+temp;
+										
+									}
+									if(data[key].age>-1 && data[key].age<13)
+									{
+										temp=+data[key].y2014;
+										concious_age=concious_age+temp;
+										
+									}
+									if(data[key].age==999)
+									{
+										totPopulation=+data[key].y2014;
+									}
+									
+								}
+								
+							}
+						}		
+						
+						
+						
+						var width=400,
+							height=400,
+							radius=200,
+							colors=d3.scale.ordinal().range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+							
+						
+						var piedata= [{label:"12-20", value:(age_12_20/totPopulation*100).toFixed(1)},
+										{label:"21-30", value:(age_21_30/totPopulation*100).toFixed(1)},
+										{label:"31-40", value:(age_31_40/totPopulation*100).toFixed(1)},
+										{label:"41-50", value:(age_41_50/totPopulation*100).toFixed(1)},
+										{label:"51-60", value:(age_51_60/totPopulation*100).toFixed(1)},
+										{label:"61-70", value:(age_61_70/totPopulation*100).toFixed(1)}];
+							console.log(totPopulation);
+							totPopulation=totPopulation-concious_age;
+								console.log(concious_age);
+						
+						var pie = d3.layout.pie()
+									.value(function(d) {
+									 return d.value;
+									 });
+									 
+						var arc=d3.svg.arc()
+								.outerRadius(radius);
+								
+						var pieChart= d3.select(chartnum).append('svg')
+										.attr("id",SVG_ID)
+										.attr('width',width)
+										.attr('height',height)
+										.append('g')
+										.attr('transform','translate('+(width-radius)+','+(height-radius)+')')
+										.selectAll('path').data(pie(piedata))
+										.enter().append('g')
+											.attr('class','slice');
+											
+						
+							pieChart.transition().ease('sin');			
+											
+											
+						var slices = d3.selectAll('g.slice')
+									 .append('path')
+											.attr('fill',function(d,i) {
+												return colors(i);
+											
+											})
+									 .attr('d',arc);
+									 
+						var text = d3.selectAll('g.slice')
+									.append('text')
+									.text(function(d,i){
+											return (d.data.label+" "+d.data.value+"%");
+									})
+									
+									.attr('text-anchor','middle')
+									.attr('fill','white')
+									.attr('transform',function(d){
+										d.innerRadius=0;
+										d.outerRadius=radius;
+										return 'translate('+ arc.centroid(d)+')'
+									});
+									
+					});
+				}
+		
+				</script>
+
+				<script>
+				function pie_func(elmnt)
+				
+				{
+					pieData=true;
+					barData=false;
+					document.getElementById("pie_layout").setAttribute("class","btn btn-primary btn-lg disabled");
+					document.getElementById("bar_layout").setAttribute("class","btn btn-primary btn-lg ");
+					document.getElementById("absolute").setAttribute("class","btn btn-primary btn-lg disabled");	
+
+					updateGraphs();
+					
+									
+				}
+				
+				function bar_func(elmnt)
+				{
+					pieData=false;
+					barData=true;
+					document.getElementById("pie_layout").setAttribute("class","btn btn-primary btn-lg");
+					document.getElementById("bar_layout").setAttribute("class","btn btn-primary btn-lg disabled");
+					document.getElementById("absolute").setAttribute("class","btn btn-primary btn-lg btn-danger");
+					absRelative=false;
+
+					updateGraphs();
+				}
+				
+				</script>
+	</body>
+</html>
